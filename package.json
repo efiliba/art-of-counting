@@ -1,6 +1,6 @@
 {
   "name": "art-of-counting",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "license": "MIT",
   "description": "Select combinations or permutations of items in a list, or the number of ways of selecting items",
   "keywords": [
@@ -10,17 +10,18 @@
     "number of ways",
     "odds calculations"
   ],
-  "homepage": "https://github.com/efiliba/Combinatorics",
+  "homepage": "https://github.com/efiliba/art-of-counting",
   "bugs": {
-    "url": "https://github.com/efiliba/Combinatorics/issues"
+    "url": "https://github.com/efiliba/art-of-counting/issues"
   },
   "author": "Eli Filiba",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/efiliba/Combinatorics.git"
+    "url": "git+https://github.com/efiliba/art-of-counting.git"
   },
+  "files": ["dist"],
   "type": "module",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
