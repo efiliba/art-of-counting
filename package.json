@@ -1,6 +1,6 @@
 {
   "name": "art-of-counting",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "license": "MIT",
   "description": "Select combinations or permutations of items in a list, or the number of ways of selecting items",
   "keywords": [
