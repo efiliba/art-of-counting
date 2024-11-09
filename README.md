@@ -1,4 +1,4 @@
-# Combinatorics
+# Combinatorics (The art of counting)
 
 Various algorithms for enumerating / counting collections implemented in
 TypeScript.
@@ -7,12 +7,14 @@ The algorithms are generic but were developed for poker hands with multiple
 decks and / or missing cards. 'given' cards can be set, to be included in the
 results.
 
+## Recommended
+
+[Use jsr version and documentation](https://jsr.io/art-of-counting/dist)
+
 ## Getting Started
 
-Instal from [jsr](https://jsr.io)
-
 ```bash
-npx jsr add @elf/combinatorics
+npm i art-of-counting
 ```
 
 ## Combinations
@@ -23,7 +25,7 @@ important).
 Example: select 2 people from the 3 options:
 
 ```ts
-import { combinations } from "@elf/combinatorics/Combinations";
+import { combinations } from "art-of-counting/dist/Combinations";
 
 const from = [
   { name: "Tom", age: 20 },
@@ -47,7 +49,7 @@ important).
 Example: all the ways to select 3 people from the 3 options:
 
 ```ts
-import { permutations } from "@elf/combinatorics/Permutations";
+import { permutations } from "art-of-counting/dist/Permutations";
 
 const from = [
   { name: "Tom", age: 20 },
@@ -75,7 +77,7 @@ To calculate the number of different poker hands use numberOfWays for all the
 Utility function to create decks of cards.
 
 ```ts
-import { decksBuilder } from "@elf/combinatorics/pokerEnumerations";
+import { decksBuilder } from "art-of-counting/dist/pokerEnumerations";
 
 const cards = decksBuilder(); // Standard deck of cards
 // Uint8Array(52) [
@@ -98,8 +100,8 @@ Get the total number of ways that distinct items can be selected (order not
 important).
 
 ```ts
-import { decksBuilder } from "@elf/combinatorics/pokerEnumerations";
-import { numberOfWays } from "@elf/combinatorics/numberOfWays";
+import { decksBuilder } from "art-of-counting/dist/pokerEnumerations";
+import { numberOfWays } from "art-of-counting/dist/numberOfWays";
 
 const cards = decksBuilder(); // Standard deck of cards
 const select = numberOfWays(cards, 13, 5); // 13 'kinds' of cards, with 5 card hands
@@ -169,9 +171,9 @@ structure. Which is also created separately by the IndicesBuilder utility.
 import {
   decksBuilder,
   pokerEnumerations,
-} from "@elf/combinatorics/pokerEnumerations";
-import { numberOfWays_UsingIndices } from "@elf/combinatorics/numberOfWays";
-import { IndicesBuilder } from "@elf/combinatorics/IndicesBuilder";
+} from "art-of-counting/dist/pokerEnumerations";
+import { numberOfWays_UsingIndices } from "art-of-counting/dist/numberOfWays";
+import { IndicesBuilder } from "art-of-counting/dist/IndicesBuilder";
 
 const cards = decksBuilder(); // Standard deck of cards
 const indices = IndicesBuilder(cards, 13); // 13 'kinds' of cards
@@ -205,7 +207,7 @@ import {
   containingBitIndex,
   numberOfBitsSet,
   onlyOption,
-} from "@elf/combinatorics/BitUtils";
+} from "art-of-counting/dist/BitUtils";
 
 numberOfBitsSet(333) === 5; // Population count i.e. 333 = 101001101 i.e. 5 bits set
 
